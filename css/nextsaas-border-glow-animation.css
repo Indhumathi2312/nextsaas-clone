@@ -1,0 +1,31 @@
+/**
+ * NexSas Border Glow Animation — Elementor container extension.
+ * Glow node: .ai-kw-generator-border-animation (theme utility + overrides below).
+ * --nextsaas-border-glow-color / --nextsaas-border-glow-size from Elementor controls.
+ */
+
+.has-nextsaas-border-glow-animation {
+  position: relative;
+  overflow: hidden;
+  --nextsaas-border-glow-color: #ff6b51;
+  --nextsaas-border-glow-size: 40px;
+}
+
+.has-nextsaas-border-glow-animation > .ai-kw-generator-border-animation {
+  z-index: 10;
+  width: var(--nextsaas-border-glow-size, 40px);
+  height: var(--nextsaas-border-glow-size, 40px);
+}
+
+.has-nextsaas-border-glow-animation > .ai-kw-generator-border-animation::before {
+  background-image: radial-gradient(
+    circle at center,
+    var(--nextsaas-border-glow-color, #ff6b51) 0%,
+    transparent 100%
+  );
+}
+
+.has-nextsaas-border-glow-animation > *:not(.ai-kw-generator-border-animation) {
+  position: relative;
+  z-index: 20;
+}

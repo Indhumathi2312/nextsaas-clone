@@ -1,0 +1,57 @@
+export const teamData = {
+  badge: "Our expert",
+  heading: "Driven by expertise. United by purpose.",
+  description:
+    "Our team of AI specialists and strategists is committed to delivering intelligent, customized solutions that fuel your growth.",
+  starIcon: "/images/Star-8-1.svg",
+  categories: [
+    { id: "students", label: "Students" },
+    { id: "professionals", label: "Professionals" },
+    { id: "marketers", label: "Marketers" },
+    { id: "writers", label: "ESL Writers" },
+    { id: "creators", label: "Creators" },
+    { id: "researchers", label: "Researchers" },
+  ],
+  members: [
+    {
+      name: "Marcus Vance",
+      role: "Lead AI Strategist",
+      category: "marketers",
+      image: "/images/opai-avatar-img-281.jpg",
+      highlight: "Improve academic writing",
+      bio: "10+ years optimizing predictive models for high-spend digital ad campaigns.",
+    },
+    {
+      name: "Elena Rostova",
+      role: "Growth Director",
+      category: "professionals",
+      image: "/images/opai-avatar-img-282.jpg",
+      highlight: "Enterprise Scaling",
+      bio: "Spearheaded growth initiatives that scaled multiple startups to 8-figure revenue.",
+    },
+    {
+      name: "David Kim",
+      role: "Creative Director",
+      category: "creators",
+      image: "/images/opai-avatar-img-283.jpg",
+      highlight: "Creative Direction",
+      bio: "Pioneering AI-enhanced video and visual ad creation with record engagement.",
+    },
+    {
+      name: "Aisha Patel",
+      role: "Senior SEO Architect",
+      category: "researchers",
+      image: "/images/opai-avatar-img-284.jpg",
+      highlight: "Algorithmic Research",
+      bio: "Author of industry-recognized guides on AI search engine optimization and semantics.",
+    },
+    {
+      name: "Lucas Meyer",
+      role: "Automation Engineer",
+      category: "students",
+      image: "/images/opai-avatar-img-285.jpg",
+      highlight: "Workflow Automation",
+      bio: "Building custom ETL pipelines connecting ad platforms to real-time warehouse data.",
+    },
+  ],
+};

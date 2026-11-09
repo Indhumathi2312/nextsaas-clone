@@ -1,0 +1,34 @@
+.footer-width-fixer {
+    width: 100%;
+}
+
+/* Container fix for genesis themes */
+
+.nextsaas-hf-template-genesis.nextsaas-hf-header .site-header .wrap,
+.nextsaas-hf-template-genesis.nextsaas-hf-footer .site-footer .wrap,
+.nextsaas-hf-template-generatepress.nextsaas-hf-header .site-header .inside-header {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* Container fix for generatepress theme */
+
+.nextsaas-hf-template-generatepress.nextsaas-hf-header .site-header,
+.nextsaas-hf-template-generatepress.nextsaas-hf-footer .site-footer {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    background-color: transparent !important; /* override generatepress default white color for header */
+}
+
+/* Fix: Header hidden below the page content */
+.nextsaas-hf-header #nextsaas-masthead {
+	z-index: 99;
+    position: relative;
+}
+
+.nextsaas-hf-header #nextsaas-masthead.nextsaas-sticky-header {
+    width: 100%;
+    overflow: visible;
+}
