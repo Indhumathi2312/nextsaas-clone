@@ -21,28 +21,25 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main id="main-content" className="relative">
-        <div className="elementor elementor-10">
-          <BackgroundWrapper />
-          <HeroSection />
-          <BrandsSection />
-          <ServicesSection />
-          <WhyChooseUsSection />
-          <ToolsSection />
-          <AboutSection />
-          <ProcessSection />
-          <PricingSection />
-          <TestimonialsSection />
-          <CertificationsSection />
-          <TeamSection />
-          <BlogSection />
-          <FaqSection />
-          <ContactSection />
-          <CtaSection />
-        </div>
+      <main id="main-content" className="relative w-full overflow-x-hidden">
+        <BackgroundWrapper />
+        <HeroSection />
+        <BrandsSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <ToolsSection />
+        <AboutSection />
+        <ProcessSection />
+        <PricingSection />
+        <TestimonialsSection />
+        <CertificationsSection />
+        <TeamSection />
+        <BlogSection />
+        <FaqSection />
+        <ContactSection />
+        <CtaSection />
       </main>
       <Footer />
     </>
   );
 }
-

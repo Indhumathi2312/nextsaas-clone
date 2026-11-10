@@ -1,101 +1,108 @@
+'use client';
+
 import React from 'react';
 import { ctaData } from '@/data/ctaData';
 
 export default function CtaSection() {
+  const topAvatars = [
+    '/images/cta-img-4.png',
+    '/images/cta-img-5.png',
+    '/images/cta-img-6.png',
+    '/images/cta-img-7.png',
+  ];
+
   return (
-    <div className="elementor-element elementor-element-1c388323 e-flex e-con-boxed nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-parent" data-e-type="container" data-element_type="container" data-id="1c388323">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-705c711d e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="705c711d">
-          <div className="gsap-animation elementor-element elementor-element-5139117 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="5139117" data-offset="60" data-rotation="0" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-55" decoding="async" height="112" loading="lazy" src="/images/cta-img-4.png" width="112" />
-                       </div>
-          <div className="gsap-animation elementor-element elementor-element-31a86b7a nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="31a86b7a" data-offset="60" data-rotation="0" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-56" decoding="async" height="112" loading="lazy" src="/images/cta-img-5.png" width="112" />
-                       </div>
-          <div className="gsap-animation elementor-element elementor-element-2c3ceae2 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="2c3ceae2" data-offset="60" data-rotation="0" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-57" decoding="async" height="112" loading="lazy" src="/images/cta-img-6.png" width="112" />
-                       </div>
-          <div className="gsap-animation elementor-element elementor-element-5c0cdcde nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.4" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="5c0cdcde" data-offset="60" data-rotation="0" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-58" decoding="async" height="112" loading="lazy" src="/images/cta-img-7.png" width="112" />
-                       </div>
+    <section
+      id="cta"
+      className="relative w-full bg-[#0D1017] text-white pt-24 sm:pt-32 lg:pt-36 pb-16 sm:pb-24 lg:pb-28 px-5 sm:px-8 lg:px-12 overflow-hidden flex flex-col items-center justify-center text-center"
+    >
+      <div className="relative z-10 w-full max-w-[1240px] mx-auto flex flex-col items-center">
+        {/* Top 4 Cyber-portraits Row */}
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 select-none">
+          {topAvatars.map((avatar, idx) => (
+            <figure
+              key={idx}
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/20 overflow-hidden shadow-lg shrink-0 m-0"
+            >
+              <img
+                src={avatar}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </figure>
+          ))}
         </div>
-        <div className="elementor-element elementor-element-2dee8adc e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="2dee8adc">
-          <div className="gsap-animation elementor-element elementor-element-5e3c6856 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="5e3c6856" data-offset="60" data-rotation="0">
-            <div className="elementor-element elementor-element-60c5ec5 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="60c5ec5" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <h2 className="font-medium mb-4 nextsaas_heading">Turn clicks</h2>
-                </div>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-6b9e3017 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="6b9e3017" data-widget_type="image.default">
-              <img alt="" className="attachment-full size-full wp-image-59" decoding="async" height="104" loading="lazy" src="/images/cta-img-8.png" width="176" />
-                           </div>
-            <div className="elementor-element elementor-element-18e3c7ea nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="18e3c7ea" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <h2 className="font-medium mb-4 nextsaas_heading">Into customers</h2>
-                </div>
-              </div>
-            </div>
+
+        {/* Row 1: Turn clicks [pill image] Into customers */}
+        <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-2 mb-2 select-none">
+          <h2 className="font-instrument text-[38px] sm:text-[54px] md:text-[68px] lg:text-[76px] font-normal leading-[1.08] text-white tracking-tight">
+            Turn clicks
+          </h2>
+          <div className="h-9 sm:h-12 md:h-13 lg:h-14 inline-flex items-center">
+            <img
+              src="/images/cta-img-8.png"
+              alt=""
+              className="w-[72px] sm:w-[88px] h-[44px] sm:h-[52px] object-cover rounded-full shadow-md"
+              loading="lazy"
+            />
           </div>
-          <div className="gsap-animation elementor-element elementor-element-5c335ad4 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="5c335ad4" data-offset="60" data-rotation="0">
-            <div className="gsap-animation elementor-element elementor-element-64bc82dd nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="64bc82dd" data-offset="60" data-rotation="0" data-widget_type="image.default">
-              <img alt="" className="attachment-full size-full wp-image-60" decoding="async" height="115" loading="lazy" src="/images/cta-img-9.png" width="115" />
-                           </div>
-            <div className="elementor-element elementor-element-36139956 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="36139956" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <h2 className="font-medium mb-4 nextsaas_heading">the smarter way</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="gsap-animation elementor-element elementor-element-752c4225 elementor-widget__width-initial nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="752c4225" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_heading_wrap nextsaas-element">
-                <p className="font-medium mb-4 nextsaas_heading">No video editing skills? No problem. Nexsas handles the hard part.</p>
-              </div>
-            </div>
-          </div>
-          <div className="gsap-animation elementor-element elementor-element-2b2a23c7 elementor-widget-mobile__width-initial nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-button" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="2b2a23c7" data-offset="60" data-rotation="0" data-widget_type="nextsaas-button.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_button_wrap">
-                <div className="md:inline-block block">
-                  <a className="nextsaas-button btn-v8 group bg-background-7 hover:border-stroke-3 relative flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent px-6 py-[13px] transition-all duration-300 ease-in-out" href="#">
-                    <div className="h-full max-h-5 overflow-hidden">
-                      <span className="font-ibm-plex-mono text-background-13/90 text-tagline-2 block -translate-y-0.5 font-medium text-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-y-[105%]">Book a strategy call</span>
-                      <span className="font-ibm-plex-mono text-tagline-2 block font-medium text-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-y-[105%]">Book a strategy call</span>
-                    </div>
-                    <div className="relative mt-[1.5px] flex size-6 overflow-hidden items-center justify-center">
-                      {/* circle */}
-                      <span className="button-v8-circle bg-background-6 absolute size-[22px] rounded-full transition-all duration-400 ease-in-out">
-                        {/* inner arrow */}
-                        <span className="button-v8-arrow stroke-background-10 absolute size-[16px] -translate-x-2 translate-y-0.5 stroke-2 transition-all duration-400 ease-in-out group-hover:translate-x-6">
-                          <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.75 13.5L11.25 9L6.75 4.5" strokeLinecap="round" strokeLinejoin="round">
-                            </path>
-                          </svg>
-                        </span>
-                      </span>
-                      {/* outer arrow */}
-                      <span className="button-v8-arrow stroke-background-10 absolute size-[18px] -translate-x-6 stroke-2 transition-all duration-400 ease-in-out group-hover:translate-x-0">
-                        <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M6.75 13.5L11.25 9L6.75 4.5" strokeLinecap="round" strokeLinejoin="round">
-                          </path>
-                        </svg>
-                      </span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 className="font-instrument text-[38px] sm:text-[54px] md:text-[68px] lg:text-[76px] font-normal leading-[1.08] text-white tracking-tight">
+            Into customers
+          </h2>
         </div>
-        <div className="gsap-animation elementor-element elementor-element-633b82b5 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.4" data-direction="right" data-duration="3" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="633b82b5" data-offset="60" data-rotation="0" data-spring="true" data-widget_type="image.default">
-          <img alt="" className="attachment-full size-full wp-image-47381" decoding="async" height="91" loading="lazy" src="/images/cta-img-10.svg" width="1290" />
-                   </div>
+
+        {/* Row 2: [pill image] the smarter way */}
+        <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-2 mb-6 sm:mb-8 select-none">
+          <div className="h-9 sm:h-12 md:h-13 lg:h-14 inline-flex items-center">
+            <img
+              src="/images/cta-img-9.png"
+              alt=""
+              className="w-[40px] sm:w-[48px] h-[40px] sm:h-[48px] object-cover rounded-xl shadow-md"
+              loading="lazy"
+            />
+          </div>
+          <h2 className="font-instrument text-[38px] sm:text-[54px] md:text-[68px] lg:text-[76px] font-normal leading-[1.08] text-white tracking-tight">
+            the smarter way
+          </h2>
+        </div>
+
+        {/* Subtitle */}
+        <p className="font-inter-tight text-[15px] sm:text-[17px] text-white/60 max-w-[560px] mb-8 sm:mb-10 leading-relaxed">
+          {ctaData.description}
+        </p>
+
+        {/* CTA Button */}
+        <div className="relative z-10 mb-2">
+          <a
+            href={ctaData.button?.href || '#contact'}
+            className="group bg-white hover:bg-white/90 text-[#0D0D12] font-ibm-plex-mono text-sm font-medium rounded-full py-3.5 px-7 flex items-center justify-center gap-3 transition-all select-none shadow-xl cursor-pointer"
+          >
+            <span>{ctaData.button?.text || 'Book a strategy call'}</span>
+            <span className="w-5 h-5 rounded-full bg-[#0D0D12] text-white flex items-center justify-center transition-transform group-hover:translate-x-0.5">
+              <svg className="w-2.5 h-2.5 text-white" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M6 12L10 8L6 4"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        {/* Hand-drawn Curving Arrow & "No sign up required" SVG */}
+        <div className="w-full max-w-[1240px] pointer-events-none select-none flex justify-center -mt-2">
+          <img
+            src="/images/cta-img-10.svg"
+            alt="No sign up required"
+            className="w-full max-w-[900px] sm:max-w-[1100px] lg:max-w-[1240px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

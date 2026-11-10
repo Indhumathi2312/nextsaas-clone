@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState('Services');
+  const [activeItem, setActiveItem] = useState('About');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -17,6 +17,44 @@ export default function Header() {
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  // Active section update on scroll (Scroll Spy)
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if near bottom of page (activate Contact)
+      if (
+        window.innerHeight + Math.round(window.scrollY) >=
+        document.documentElement.scrollHeight - 100
+      ) {
+        setActiveItem('Contact');
+        return;
+      }
+
+      const headerOffset = 180;
+      let currentSection = null;
+
+      for (const item of navItems) {
+        const el = document.querySelector(item.href);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= headerOffset && rect.bottom > 80) {
+            currentSection = item.name;
+          }
+        }
+      }
+
+      if (currentSection) {
+        setActiveItem(currentSection);
+      } else if (window.scrollY < 250) {
+        setActiveItem('About');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>

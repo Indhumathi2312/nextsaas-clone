@@ -4,5 +4,6 @@ build/
 out/
 .bin/
 scratch/
+.dev/
 .DS_Store
 *.log

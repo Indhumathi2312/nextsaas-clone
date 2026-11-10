@@ -1,0 +1,6 @@
+/index.html   /   200
+/start.html   /   200
+/ai-marketing-agency-one-page   /   200
+/ai-marketing-agency-one-page/*   /   200
+/*   /index.html   200
+

@@ -1,141 +1,128 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { blogData } from '@/data/blogData';
 
 export default function BlogSection() {
+  const [activeBlog, setActiveBlog] = useState(0); // Card 0 active by default, expands on hover like partnership deck
+  const {
+    badge,
+    heading,
+    headingHighlight,
+    headingSub,
+    description,
+    starIcon,
+    ctaButton,
+    posts,
+  } = blogData;
+
   return (
-    <div className="elementor-element elementor-element-183a625c e-flex e-con-boxed nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-parent" data-e-type="container" data-element_type="container" data-id="183a625c" id="blog">
-      <div className="e-con-inner">
-        <div className="gsap-animation elementor-element elementor-element-48adcc69 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="48adcc69" data-offset="60" data-rotation="0">
-          <div className="elementor-element elementor-element-314c83ca nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="314c83ca" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-35" decoding="async" height="32" loading="lazy" src="/images/Star-9.png" width="31" />
-                       </div>
-          <div className="elementor-element elementor-element-7c0e7661 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="7c0e7661" data-widget_type="nextsaas-heading.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_heading_wrap nextsaas-element">
-                <p className="font-medium mb-4 nextsaas_heading">Blog</p>
-              </div>
-            </div>
-          </div>
+    <section
+      id="blog"
+      className="relative w-full bg-white text-black pt-20 sm:pt-28 lg:pt-[120px] pb-24 sm:pb-32 lg:pb-[140px] px-5 sm:px-8 lg:px-12 overflow-hidden"
+    >
+      {/* Section Header */}
+      <div className="w-full max-w-[800px] mx-auto flex flex-col items-center text-center mb-12 sm:mb-16">
+        <div className="flex items-center justify-center gap-2 mb-3 select-none">
+          <img src={starIcon} alt="" className="w-3.5 h-3.5 object-contain" />
+          <span className="font-inter-tight text-xs sm:text-[13px] font-normal text-black/60 tracking-wider">
+            {badge}
+          </span>
         </div>
-        <div className="gsap-animation elementor-element elementor-element-6a00bee2 elementor-widget__width-initial nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="6a00bee2" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-          <div className="elementor-widget-container">
-            <div className="nextsaas_heading_wrap nextsaas-element">
-              <h2 className="font-medium mb-4 nextsaas_heading">
-                
-				Stay Ahead with the                 <span className="text-primary-500 highlited-text">Latest in AI Automation</span>
-                               </h2>
-            </div>
-          </div>
-        </div>
-        <div className="gsap-animation elementor-element elementor-element-33b4f71e nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="33b4f71e" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-          <div className="elementor-widget-container">
-            <div className="nextsaas_heading_wrap nextsaas-element">
-              <p className="font-medium mb-4 nextsaas_heading">Discover expert tips, industry trends, and actionable strategies to power your growth with Nexsas.</p>
-            </div>
-          </div>
-        </div>
-        <div className="gsap-animation elementor-element elementor-element-429cb9a e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.4" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="429cb9a" data-offset="60" data-rotation="0">
-          <div className="elementor-element elementor-element-370a33dd nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas_blog" data-e-type="widget" data-element_type="widget" data-id="370a33dd" data-widget_type="nextsaas_blog.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_blog_wrapper">
-                {/* Blog Posts Cards Type 2: wrapper for JS active-card + underline hover */}
-                <div className="blog-cards-type-2 flex items-start justify-center max-lg:flex-wrap max-lg:gap-y-9 max-lg:space-x-0 md:space-x-[30px]">
-                  <article className="group underline-hover-effect-black blog-card relative min-h-[545px] space-y-4">
-                    <a className="block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/a-beginners-guide-to-automating-workflows-with-ai/">
-                      <figure className="h-[380px] w-full overflow-hidden rounded-lg">
-                        <img alt="A beginner’s guide to automating workflows with AI" className="!h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:rotate-2" decoding="async" src="/images/opai-img-499.jpg" />
-                      </figure>
-                    </a>
-                    <div className="space-y-4 px-2">
-                      <p className="text-tagline-5 text-background-13/80 font-normal blog-meta">1/3/2026</p>
-                      <div className="space-y-2">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/blog/">Blog</a>
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/press/">Press</a>
-                        </div>
-                        <a className="blog-title blog-title-black block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/a-beginners-guide-to-automating-workflows-with-ai/">
-                          <h3 className="text-is-heading-5 text-background-13 font-normal">A beginner’s guide to automating workflows with AI</h3>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                  <article className="group underline-hover-effect-black blog-card relative min-h-[545px] space-y-4">
-                    <a className="block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/5-ai-tools-every-business-needs-to-streamline-operations/">
-                      <figure className="h-[380px] w-full overflow-hidden rounded-lg">
-                        <img alt="5 AI tools every business needs to streamline operations" className="!h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:rotate-2" decoding="async" src="/images/opai-img-498.jpg" />
-                      </figure>
-                    </a>
-                    <div className="space-y-4 px-2">
-                      <p className="text-tagline-5 text-background-13/80 font-normal blog-meta">1/3/2026</p>
-                      <div className="space-y-2">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/blog/">Blog</a>
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/press/">Press</a>
-                        </div>
-                        <a className="blog-title blog-title-black block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/5-ai-tools-every-business-needs-to-streamline-operations/">
-                          <h3 className="text-is-heading-5 text-background-13 font-normal">5 AI tools every business needs to streamline operations</h3>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                  <article className="group underline-hover-effect-black blog-card relative min-h-[545px] space-y-4">
-                    <a className="block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/a-beginners-guide-to-automating-workflows-with-ai-2/">
-                      <figure className="h-[380px] w-full overflow-hidden rounded-lg">
-                        <img alt="A beginner’s guide to automating workflows with AI" className="!h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:rotate-2" decoding="async" src="/images/opai-img-497.jpg" />
-                      </figure>
-                    </a>
-                    <div className="space-y-4 px-2">
-                      <p className="text-tagline-5 text-background-13/80 font-normal blog-meta">1/3/2026</p>
-                      <div className="space-y-2">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/blog/">Blog</a>
-                          <a className="bg-background-13/5 text-tagline-4 text-background-13/50 rounded-full px-3 py-1 font-normal blog-category" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/category/press/">Press</a>
-                        </div>
-                        <a className="blog-title blog-title-black block" href="https://nextsaas-wp.pixels71.com/ai-marketing-agency-one-page/2026/03/01/a-beginners-guide-to-automating-workflows-with-ai-2/">
-                          <h3 className="text-is-heading-5 text-background-13 font-normal">A beginner’s guide to automating workflows with AI</h3>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gsap-animation elementor-element elementor-element-3c5f8852 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-button" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="3c5f8852" data-offset="60" data-rotation="0" data-widget_type="nextsaas-button.default">
-          <div className="elementor-widget-container">
-            <div className="nextsaas_button_wrap">
-              <div className="md:inline-block block">
-                <a className="nextsaas-button btn-v8 group bg-background-7 hover:border-stroke-3 relative flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent px-6 py-[13px] transition-all duration-300 ease-in-out" href="#blog">
-                  <div className="h-full max-h-5 overflow-hidden">
-                    <span className="font-ibm-plex-mono text-background-13/90 text-tagline-2 block -translate-y-0.5 font-medium text-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-y-[105%]">Read our blog</span>
-                    <span className="font-ibm-plex-mono text-tagline-2 block font-medium text-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-y-[105%]">Read our blog</span>
-                  </div>
-                  <div className="relative mt-[1.5px] flex size-6 overflow-hidden items-center justify-center">
-                    {/* circle */}
-                    <span className="button-v8-circle bg-background-6 absolute size-[22px] rounded-full transition-all duration-400 ease-in-out">
-                      {/* inner arrow */}
-                      <span className="button-v8-arrow stroke-background-10 absolute size-[16px] -translate-x-2 translate-y-0.5 stroke-2 transition-all duration-400 ease-in-out group-hover:translate-x-6">
-                        <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M6.75 13.5L11.25 9L6.75 4.5" strokeLinecap="round" strokeLinejoin="round">
-                          </path>
-                        </svg>
-                      </span>
-                    </span>
-                    {/* outer arrow */}
-                    <span className="button-v8-arrow stroke-background-10 absolute size-[18px] -translate-x-6 stroke-2 transition-all duration-400 ease-in-out group-hover:translate-x-0">
-                      <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.75 13.5L11.25 9L6.75 4.5" strokeLinecap="round" strokeLinejoin="round">
-                        </path>
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <h2 className="font-instrument text-[40px] sm:text-[48px] lg:text-[54px] font-normal leading-[1.12] text-black mb-3">
+          {heading}{' '}
+          <span className="font-instrument text-black/40">
+            {headingHighlight}
+          </span>
+          <br className="hidden sm:inline" />{' '}
+          <span className="font-instrument text-black/40">
+            {headingSub}
+          </span>
+        </h2>
+
+        <p className="font-inter-tight text-[15px] sm:text-[16px] font-normal text-zinc-600 leading-relaxed max-w-[680px]">
+          {description}
+        </p>
       </div>
-    </div>
+
+      {/* 3 Blog Cards with Partnership Box Expand Movement */}
+      <div className="w-full max-w-[1240px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-8 mb-12 sm:mb-16">
+        {posts.map((post, idx) => {
+          const isActive = activeBlog === idx;
+
+          return (
+            <article
+              key={post.id}
+              onMouseEnter={() => setActiveBlog(idx)}
+              className={`group flex flex-col cursor-pointer overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.645,0.045,0.355,1)] w-full ${
+                isActive
+                  ? 'lg:flex-[1.55] lg:min-w-[360px]'
+                  : 'lg:flex-1 lg:min-w-[280px]'
+              }`}
+            >
+              {/* Image Figure */}
+              <div className="relative w-full h-[260px] sm:h-[320px] lg:h-[380px] overflow-hidden rounded-[16px] bg-zinc-100 mb-4 shadow-sm shrink-0">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Meta Date */}
+              <p className="font-inter-tight text-[13px] font-normal text-zinc-500 mb-2">
+                {post.date}
+              </p>
+
+              {/* Tag Badges */}
+              <div className="flex items-center gap-2 mb-3">
+                {post.tags.map((tag, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="px-3 py-0.5 rounded-full bg-zinc-100 text-zinc-600 font-inter-tight text-xs font-normal"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Post Title with Animated Underline */}
+              <h3 className="font-instrument text-[24px] sm:text-[26px] font-normal text-zinc-950 leading-snug">
+                <span className="bg-gradient-to-r from-black to-black bg-[length:0%_1px] bg-left-bottom bg-no-repeat group-hover:bg-[length:100%_1px] transition-[background-size] duration-500 pb-0.5 inline">
+                  {post.title}
+                </span>
+              </h3>
+            </article>
+          );
+        })}
+      </div>
+
+      {/* Bottom CTA Button */}
+      <div className="w-full flex justify-center">
+        <a
+          href={ctaButton.href}
+          className="group bg-[#0B0D13] hover:bg-black text-white font-inter-tight text-sm font-medium rounded-full py-3.5 px-7 flex items-center justify-center gap-2.5 transition-all select-none shadow-md"
+        >
+          <span>{ctaButton.text}</span>
+          <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center transition-transform group-hover:translate-x-0.5">
+            <svg
+              className="w-2.5 h-2.5 text-white"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
   );
 }

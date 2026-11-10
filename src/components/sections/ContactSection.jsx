@@ -1,173 +1,192 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { contactData } from '@/data/contactData';
 
 export default function ContactSection() {
-  const [submitted, setSubmitted] = React.useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    acceptTerms: false,
+  });
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
   };
+
   return (
-    <div className="elementor-element elementor-element-7a453e28 e-flex e-con-boxed nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-parent" data-e-type="container" data-element_type="container" data-id="7a453e28" id="contact">
-      <div className="e-con-inner">
-        <div className="gsap-animation elementor-element elementor-element-38f48390 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="38f48390" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-          <div className="elementor-widget-container">
-            <div className="nextsaas_heading_wrap nextsaas-element">
-              <h2 className="font-medium mb-4 nextsaas_heading">Let’s talk, we’re here to help</h2>
-            </div>
-          </div>
-        </div>
-        <div className="gsap-animation elementor-element elementor-element-5743e2a nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="5743e2a" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-          <div className="elementor-widget-container">
-            <div className="nextsaas_heading_wrap nextsaas-element">
-              <p className="font-medium mb-4 nextsaas_heading">Got any questions or how OptimAI can help your business thrive? We're here for you.</p>
-            </div>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-64a68d9e e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="64a68d9e">
-          <div className="elementor-element elementor-element-5672741 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="5672741">
-            <div className="gsap-animation elementor-element elementor-element-19cfa1f2 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="19cfa1f2" data-offset="60" data-rotation="0">
-              <div className="elementor-element elementor-element-6ad694ce nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="6ad694ce" data-widget_type="image.default">
-                <img alt="" className="attachment-full size-full wp-image-47391" decoding="async" height="16" loading="lazy" src="/images/Star-8-1.svg" width="16" />
-                               </div>
-              <div className="elementor-element elementor-element-748b5011 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="748b5011" data-widget_type="nextsaas-heading.default">
-                <div className="elementor-widget-container">
-                  <div className="nextsaas_heading_wrap nextsaas-element">
-                    <p className="font-medium mb-4 nextsaas_heading">Contact Us</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="gsap-animation elementor-element elementor-element-486d856b elementor-widget__width-initial nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="486d856b" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <h2 className="font-medium mb-4 nextsaas_heading">Reach out — We’ll get back within 24 hours</h2>
-                </div>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-5a1052fd e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="5a1052fd">
-              <div className="gsap-animation elementor-element elementor-element-19382450 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="19382450" data-offset="60" data-rotation="0">
-                <div className="elementor-element elementor-element-67f42f9c nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="67f42f9c" data-widget_type="image.default">
-                  <img alt="" className="attachment-full size-full wp-image-47392" decoding="async" height="36" loading="lazy" src="/images/Email-Icon-1.svg" width="36" />
-                                   </div>
-                <div className="elementor-element elementor-element-6d888609 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="6d888609">
-                  <div className="elementor-element elementor-element-3e9d8ad4 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="3e9d8ad4" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">Email</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="elementor-element elementor-element-7ab9aa33 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="7ab9aa33" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">support@optimai.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="gsap-animation elementor-element elementor-element-1aeb1c5d e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.4" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="1aeb1c5d" data-offset="60" data-rotation="0">
-                <div className="elementor-element elementor-element-74f776c0 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="74f776c0" data-widget_type="image.default">
-                  <img alt="" className="attachment-full size-full wp-image-47393" decoding="async" height="36" loading="lazy" src="/images/Phone-Icon-1.svg" width="36" />
-                                   </div>
-                <div className="elementor-element elementor-element-dbd3ce6 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="dbd3ce6">
-                  <div className="elementor-element elementor-element-552446c8 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="552446c8" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">Phone</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="elementor-element elementor-element-1a4412d1 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="1a4412d1" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">support@optimai.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="gsap-animation elementor-element elementor-element-509675d4 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.5" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="509675d4" data-offset="60" data-rotation="0">
-                <div className="elementor-element elementor-element-502d84c0 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="502d84c0" data-widget_type="image.default">
-                  <img alt="" className="attachment-full size-full wp-image-47394" decoding="async" height="36" loading="lazy" src="/images/Address-Icon-1.svg" width="36" />
-                                   </div>
-                <div className="elementor-element elementor-element-5758fb41 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="5758fb41">
-                  <div className="elementor-element elementor-element-3f7eafd2 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="3f7eafd2" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">Address</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="elementor-element elementor-element-e8fb5d3 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="e8fb5d3" data-widget_type="nextsaas-heading.default">
-                    <div className="elementor-widget-container">
-                      <div className="nextsaas_heading_wrap nextsaas-element">
-                        <p className="font-medium mb-4 nextsaas_heading">123 Innovation Street, TechCity, CA 94043</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="gsap-animation elementor-element elementor-element-1bfcfffc e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="1bfcfffc" data-offset="60" data-rotation="0">
-            <div className="elementor-element elementor-element-71206f4 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas_contact_form" data-e-type="widget" data-element_type="widget" data-id="71206f4" data-widget_type="nextsaas_contact_form.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas-contact-form nextsaas-contact-form-7 nextsaas-contact-form-71206f4">
-                  <div className="wpcf7 no-js" data-wpcf7-id="12799" dir="ltr" id="wpcf7-f12799-p10-o1" lang="en-US">
-                    <div className="screen-reader-response">
-                      <p aria-atomic="true" aria-live="polite" role="status">
-                      </p>
-                                             <ul>
-                      </ul>
-                    </div>
-                    <form action="/ai-marketing-agency-one-page/#wpcf7-f12799-p10-o1" aria-label="Contact form" className="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
-                      <fieldset className="hidden-fields-container">
-                        <input name="_wpcf7" type="hidden" value="12799" />
-                        <input name="_wpcf7_version" type="hidden" value="6.1.5" />
-                        <input name="_wpcf7_locale" type="hidden" value="en_US" />
-                        <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f12799-p10-o1" />
-                        <input name="_wpcf7_container_post" type="hidden" value="10" />
-                        <input name="_wpcf7_posted_data_hash" type="hidden" value="" />
-                      </fieldset>
-                      <label>
-                         Name
-                            <input aria-invalid="false" aria-required="true" autoComplete="name" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" maxlength="400" name="your-name" placeholder="Enter your Name" size="40" type="text" value="" />
-                                               </label>
-                      <label>
-                         Email
-                            <input aria-invalid="false" aria-required="true" autoComplete="email" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" maxlength="400" name="your-email" placeholder="Enter your email" size="40" type="email" value="" />
-                                               </label>
-                      <label>
-                         Your message
-                            <textarea aria-invalid="false" className="wpcf7-form-control wpcf7-textarea" cols="40" maxlength="2000" name="your-message" placeholder="Type your message" rows="10">
-                        </textarea>
-                                               </label>
-                      <span className="wpcf7-form-control wpcf7-acceptance optional">
-                        <span className="wpcf7-list-item">
-                          <label>
-                            <input aria-invalid="false" name="acceptance-907" type="checkbox" value="1" />
-                            <span className="wpcf7-list-item-label">I accept the Terms</span>
-                          </label>
-                        </span>
-                      </span>
-                      <input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit Request" />
-                      <div aria-hidden="true" className="wpcf7-response-output">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-27542477 elementor-absolute e-transform nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="27542477" data-widget_type="image.default">
-          <img alt="" className="attachment-full size-full wp-image-47632" decoding="async" height="1041" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" src="/images/Gradient-bottom-scaled.png" srcSet="/images/Gradient-bottom-scaled.png 2560w, /images/Gradient-bottom-300x122.png 300w, /images/Gradient-bottom-1024x417.png 1024w, /images/Gradient-bottom-768x312.png 768w, /images/Gradient-bottom-340x138.png 340w, /images/Gradient-bottom-1536x625.png 1536w, /images/Gradient-bottom-2048x833.png 2048w" width="2560" />
-                   </div>
+    <section
+      id="contact"
+      className="relative w-full bg-[#11141D] text-white pt-24 sm:pt-32 lg:pt-[156px] pb-20 sm:pb-28 lg:pb-[120px] px-5 sm:px-8 lg:px-12 overflow-hidden"
+    >
+      {/* Background Ambient Purple Graphic matching Elementor 27542477 from HTML */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full select-none z-0">
+        <img
+          src={contactData.gradientBg}
+          alt=""
+          className="w-full max-w-none h-auto object-cover select-none pointer-events-none origin-bottom scale-[1.4] block"
+          aria-hidden="true"
+        />
       </div>
-    </div>
+
+      <div className="relative z-10 w-full max-w-[1240px] mx-auto">
+        {/* Section Top Header */}
+        <div className="w-full max-w-[800px] mx-auto text-center mb-16 sm:mb-20">
+          <h2 className="font-instrument text-[42px] sm:text-[50px] lg:text-[56px] font-normal leading-[1.12] text-white mb-4">
+            {contactData.heading}
+          </h2>
+
+          <p className="font-inter-tight text-[15px] sm:text-[16px] text-white/60 leading-[24px] max-w-[620px] mx-auto">
+            {contactData.description}
+          </p>
+        </div>
+
+        {/* Two-Column Grid: Contact Details & Form */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16">
+          {/* Left Column (44%) */}
+          <div className="w-full lg:w-[44%] flex flex-col space-y-6">
+            <div>
+              <div className="flex items-center gap-2 mb-3 select-none">
+                <img
+                  src={contactData.starIcon}
+                  alt=""
+                  className="w-3.5 h-3.5 object-contain"
+                />
+                <span className="font-inter-tight text-white/50 text-xs sm:text-[13px] font-normal leading-[18px] tracking-wide">
+                  {contactData.badge}
+                </span>
+              </div>
+
+              <h3 className="font-instrument text-[34px] sm:text-[40px] font-normal text-white leading-tight mb-2">
+                {contactData.formSubtitle}
+              </h3>
+            </div>
+
+            <div className="space-y-4 w-full pt-2">
+              {contactData.contactInfo.map((info, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-4 p-5 rounded-[12px] bg-[#11141D] border border-white/[0.08]"
+                >
+                  <figure className="w-11 h-11 rounded-full bg-[#3D4753] flex items-center justify-center shrink-0 m-0">
+                    <img
+                      src={info.icon}
+                      alt={info.label}
+                      className="w-5 h-5 object-contain"
+                    />
+                  </figure>
+                  <div>
+                    <span className="font-inter-tight text-xs font-normal text-white/40 block mb-0.5">
+                      {info.label}
+                    </span>
+                    <span className="font-inter-tight text-sm sm:text-[15px] font-normal text-white">
+                      {info.value}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column (52%): Form Container */}
+          <div className="w-full lg:w-[52%] bg-[#11141D] rounded-[16px] border border-white/[0.08] p-8 sm:p-10 shadow-2xl">
+            {submitted ? (
+              <div className="py-12 text-center">
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-2xl mb-4">
+                  ✓
+                </span>
+                <h4 className="font-instrument text-2xl font-normal text-white mb-2">
+                  Request Received
+                </h4>
+                <p className="font-inter-tight text-sm text-white/60">
+                  Thank you! An AI marketing specialist will reach out within 24 hours.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label className="font-inter-tight text-sm font-normal text-white/80 block mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter your Name"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    className="w-full px-4 py-3.5 rounded-xl bg-black/20 border border-white/10 text-white placeholder-white/30 text-sm font-inter-tight focus:outline-none focus:border-white/30 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="font-inter-tight text-sm font-normal text-white/80 block mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    className="w-full px-4 py-3.5 rounded-xl bg-black/20 border border-white/10 text-white placeholder-white/30 text-sm font-inter-tight focus:outline-none focus:border-white/30 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="font-inter-tight text-sm font-normal text-white/80 block mb-2">
+                    Your message
+                  </label>
+                  <textarea
+                    rows={4}
+                    required
+                    placeholder="Type your message"
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    className="w-full px-4 py-3.5 rounded-xl bg-black/20 border border-white/10 text-white placeholder-white/30 text-sm font-inter-tight focus:outline-none focus:border-white/30 transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="flex items-center gap-2.5 pt-1">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                    checked={formData.acceptTerms}
+                    onChange={(e) =>
+                      setFormData({ ...formData, acceptTerms: e.target.checked })
+                    }
+                    className="w-4 h-4 rounded border-white/20 bg-white/5 text-black focus:ring-0 cursor-pointer"
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="font-inter-tight text-xs sm:text-sm text-white/60 cursor-pointer select-none"
+                  >
+                    I accept the Terms
+                  </label>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="px-8 py-3.5 rounded-xl font-ibm-plex-mono text-sm sm:text-base font-medium text-[#12161F] bg-[#F8F9FA] hover:bg-white transition-all select-none shadow-md cursor-pointer"
+                  >
+                    Submit Request
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

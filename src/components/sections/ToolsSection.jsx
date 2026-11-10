@@ -3,154 +3,86 @@ import { toolsData } from '@/data/toolsData';
 
 export default function ToolsSection() {
   return (
-    <div className="elementor-element elementor-element-2b9a402d e-flex e-con-boxed nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-parent" data-e-type="container" data-element_type="container" data-id="2b9a402d">
-      <div className="e-con-inner">
-        <div className="gsap-animation elementor-element elementor-element-53af8a5b e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="53af8a5b" data-offset="60" data-rotation="0">
-          <div className="elementor-element elementor-element-1279b288 nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="1279b288" data-widget_type="image.default">
-            <img alt="" className="attachment-full size-full wp-image-35" decoding="async" height="32" loading="lazy" src="/images/Star-9.png" width="31" />
-                       </div>
-          <div className="elementor-element elementor-element-15e6a987 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="15e6a987" data-widget_type="nextsaas-heading.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_heading_wrap nextsaas-element">
-                <p className="font-medium mb-4 nextsaas_heading">Our Tech Stack</p>
-              </div>
-            </div>
-          </div>
+    <section
+      id="tools"
+      className="relative w-full bg-white text-[#11141D] pt-16 sm:pt-20 lg:pt-[120px] pb-12 sm:pb-16 lg:pb-20 px-5 -mb-[2px] overflow-hidden"
+    >
+      <div className="relative z-10 w-full max-w-[1290px] mx-auto flex flex-col items-center text-center">
+        {/* Pill Badge: ✦ Our Tech Stack */}
+        <div className="relative z-20 flex items-center justify-center gap-1.5 mb-5 select-none">
+          <img
+            src={toolsData.starIcon}
+            alt=""
+            className="w-4 h-4 object-contain"
+          />
+          <p className="font-inter-tight text-[12px] font-normal leading-[18px] text-black tracking-normal">
+            {toolsData.badge}
+          </p>
         </div>
-        <div className="elementor-element elementor-element-50f7dae7 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="50f7dae7">
-          <div className="gsap-animation elementor-element elementor-element-26f52332 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="26f52332" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_heading_wrap nextsaas-element">
-                <h2 className="font-medium mb-4 nextsaas_heading">
-                  
-				Built on Top AI +                   <span className="text-primary-500 highlited-text">Marketing Tools</span>
-                                   </h2>
-              </div>
-            </div>
-          </div>
-          <div className="gsap-animation elementor-element elementor-element-34946c6f elementor-widget__width-initial nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="34946c6f" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-            <div className="elementor-widget-container">
-              <div className="nextsaas_heading_wrap nextsaas-element">
-                <p className="font-medium mb-4 nextsaas_heading">We blend automation with human creativity.</p>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-element elementor-element-3ae51a59 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="3ae51a59">
-            <div className="gsap-animation elementor-element elementor-element-6c891c9b nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas_customer_logos" data-delay="0.4" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="6c891c9b" data-offset="60" data-rotation="0" data-widget_type="nextsaas_customer_logos.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_customer_logos_wrapper" data-direction="left" data-gap="" data-layout="circle-marquee" data-pause-hover="no" data-speed="40000">
-                  <div className="w-[800px] md:w-[750px] lg:w-[990px] xl:w-[1300px] 2xl:w-[1400px] nextsaas_customer_logos_circle_wrapper">
-                    <svg className="ai-voice-generator-integration-circle" fill="none" viewBox="0 0 1484 1484" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="740" cy="744" r="699.5" stroke="#F4EFE7">
-                      </circle>
-                      <foreignobject height="74" width="74" x="703" y="7.5">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 1" decoding="async" src="/images/gemini.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="919.15738756528" y="41.73596685154">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 2" decoding="async" src="/images/grok-ai.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1114.1557839786" y="141.09261243472">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 3" decoding="async" src="/images/Perplexity-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1268.9073875653" y="295.84421602142">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 4" decoding="async" src="/images/runway.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1368.2640331485" y="490.84261243472">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 5" decoding="async" src="/images/qwen.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1402.5" y="707">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 6" decoding="async" src="/images/Mistral-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1368.2640331485" y="923.15738756528">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 7" decoding="async" src="/images/open-ai.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1268.9073875653" y="1118.1557839786">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 8" decoding="async" src="/images/Deepseek.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="1114.1557839786" y="1272.9073875653">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 9" decoding="async" src="/images/Claude-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="919.15738756528" y="1372.2640331485">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 10" decoding="async" src="/images/runway.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="703" y="1406.5">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 1" decoding="async" src="/images/gemini.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="486.84261243472" y="1372.2640331485">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 2" decoding="async" src="/images/grok-ai.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="291.84421602142" y="1272.9073875653">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 3" decoding="async" src="/images/Perplexity-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="137.09261243472" y="1118.1557839786">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 4" decoding="async" src="/images/runway.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="37.73596685154" y="923.15738756528">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 5" decoding="async" src="/images/qwen.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="3.5" y="707">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none rotate-180" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 6" decoding="async" src="/images/Mistral-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="37.73596685154" y="490.84261243472">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 7" decoding="async" src="/images/open-ai.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="137.09261243472" y="295.84421602142">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 8" decoding="async" src="/images/Deepseek.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="291.84421602141" y="141.09261243472">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 9" decoding="async" src="/images/Claude-AI.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                      <foreignobject height="74" width="74" x="486.84261243472" y="41.73596685154">
-                        <div className="bg-secondary border-ns-ivory flex shrink-0 items-center justify-center rounded-full border-8 shadow-none" style={{'width': '74px', 'height': '74px'}} xmlns="http://www.w3.org/1999/xhtml">
-                          <img alt="Client Logo 10" decoding="async" src="/images/runway.svg" style={{'width': 'calc(100% - 16px)', 'height': 'calc(100% - 16px)', 'maxWidth': 'calc(100% - 16px)', 'maxHeight': 'calc(100% - 16px)', 'objectFit': 'contain'}} />
-                        </div>
-                      </foreignobject>
-                    </svg>
+
+        {/* Heading */}
+        <h2 className="relative z-20 font-instrument text-[36px] sm:text-[44px] md:text-[50px] font-normal leading-[1.12] text-[#11141D] max-w-[700px] mb-3">
+          {toolsData.heading.main}{' '}
+          <span className="text-[#0D0D124D]">
+            {toolsData.heading.highlight}
+          </span>
+        </h2>
+
+        {/* Subtitle */}
+        <p className="relative z-20 font-inter-tight text-[15px] sm:text-[16px] font-normal leading-[24px] text-[#0D0D1299] max-w-[480px] mb-2 sm:mb-4">
+          {toolsData.description}
+        </p>
+
+        {/* Rotating Circular Arc (Bottom Half View) */}
+        <div className="relative w-full overflow-hidden flex items-start justify-center min-h-[260px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[400px] select-none">
+          {/* Left & Right Fade Gradient Masks */}
+          <div
+            className="pointer-events-none absolute left-0 top-0 bottom-0 w-1/5 bg-gradient-to-r from-white to-transparent z-10"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute right-0 top-0 bottom-0 w-1/5 bg-gradient-to-l from-white to-transparent z-10"
+            aria-hidden="true"
+          />
+
+          {/* SVG Circle Positioned to Reveal the Lower Arc Under the Text */}
+          <div className="shrink-0 absolute flex items-center justify-center w-[850px] sm:w-[1100px] md:w-[1300px] lg:w-[1450px] -top-[600px] sm:-top-[800px] md:-top-[950px] lg:-top-[1060px]">
+            <svg
+              className="ai-voice-generator-integration-circle w-full h-auto"
+              viewBox="0 0 1484 1484"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{
+                animation: 'spin 50s linear infinite',
+              }}
+            >
+              <circle cx="740" cy="744" r="699.5" stroke="#F4EFE700" strokeWidth="1" />
+
+              {toolsData.circleItems.map((item, idx) => (
+                <foreignObject
+                  key={idx}
+                  x={item.x - 11}
+                  y={item.y - 11}
+                  width="96"
+                  height="96"
+                >
+                  <div
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    className="flex shrink-0 items-center justify-center rounded-full bg-[#E4EAEE] border-4 border-[#F1F4F6] w-[96px] h-[96px] p-4 select-none shadow-sm"
+                  >
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      className="w-full h-full object-contain opacity-100"
+                      loading="lazy"
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
+                </foreignObject>
+              ))}
+            </svg>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

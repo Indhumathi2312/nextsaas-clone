@@ -9,7 +9,7 @@ export const faqData = {
     {
       question: "What is the capital of France?",
       answer:
-        "Paris is the capital of France, globally recognized for its art, gastronomy, and cultural heritage.",
+        "Paris is the capital of France, globally celebrated for its art, gastronomy, and cultural heritage.",
     },
     {
       question: "How does photosynthesis work?",
@@ -22,14 +22,29 @@ export const faqData = {
         "Regular physical activity improves cardiovascular health, boosts metabolic function, and enhances mental clarity.",
     },
     {
-      question: "How do your AI marketing models differ from standard agencies?",
+      question: "Who wrote 'Pride and Prejudice'?",
       answer:
-        "We combine real-time algorithmic bidding and automated creative variation testing with experienced senior marketing strategists.",
+        "Jane Austen wrote 'Pride and Prejudice', published in 1813, which remains one of the most beloved English literary classics.",
     },
     {
-      question: "What is the typical timeframe to see compound results?",
+      question: "What is the importance of the water cycle?",
       answer:
-        "Most clients begin observing noticeable efficiency improvements within 14 to 30 days, with exponential growth compounding at 60-90 days.",
+        "The water cycle continuously redistributes fresh water across the globe, supporting ecosystems, agriculture, and life on Earth.",
+    },
+    {
+      question: "What are the main causes of climate change?",
+      answer:
+        "The primary driver of modern climate change is human activity, particularly the combustion of fossil fuels that releases greenhouse gases.",
+    },
+    {
+      question: "What is the process of cellular respiration?",
+      answer:
+        "Cellular respiration is a series of chemical reactions that break down glucose to generate ATP, the essential energy currency of cells.",
+    },
+    {
+      question: "How do vaccines work to protect against diseases?",
+      answer:
+        "Vaccines stimulate the immune system to recognize and fight specific pathogens without causing the actual illness.",
     },
   ],
 };

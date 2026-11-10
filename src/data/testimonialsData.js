@@ -1,51 +1,53 @@
 export const testimonialsData = {
   badge: "Our process",
-  heading: "What Our Clients\nAre Saying.",
+  heading: "What Our Clients",
+  headingHighlight: "Are Saying.",
   starIcon: "/images/Star-8.svg",
+  ambientGlow: "/images/Gradient-bottom-scaled.png",
   testimonials: [
     {
-      name: "Lena Torres",
-      role: "CMO",
-      company: "Aura Retail",
-      avatar: "/images/avatar-1-1.png",
-      content:
+      id: 1,
+      quote:
         "Dedicated, forward-thinking, and results-driven—precisely what we were looking for. Their innovative approach consistently brings fresh ideas to the table. With a strong commitment to excellence.",
+      author: "Lena Torres",
+      role: "CMO",
+      avatar: "/images/avatar-1-1.png",
       rating: 5,
     },
     {
-      name: "Maya Chen",
-      role: "Head of Growth",
-      company: "Nexus Labs",
+      id: 2,
+      quote:
+        "Committed, innovative, and results-oriented—exactly what we needed. Their creative strategies consistently introduce new concepts. With a deep dedication to quality.",
+      author: "Maya Chen",
+      role: "CTO, Fintech Innovators",
       avatar: "/images/ns-avatar-37-1.png",
-      content:
-        "Nexsas transformed our paid advertising completely. We cut customer acquisition costs by 42% while doubling our qualified leads within the first quarter.",
       rating: 5,
     },
     {
-      name: "Andre Dupont",
-      role: "Founder & CEO",
-      company: "Luxe Health",
+      id: 3,
+      quote:
+        "Driven, visionary, and outcome-focused—just what we were searching for. Their inventive methods regularly offer fresh perspectives. With a strong focus on excellence.",
+      author: "Andre Dupont",
+      role: "Digital Marketing Manager, Retail Chai",
       avatar: "/images/ns-avatar-33-1.png",
-      content:
-        "The level of transparency and weekly execution is unmatched. Their team feels like a true extension of our internal marketing department.",
       rating: 5,
     },
     {
-      name: "Mei Chen",
-      role: "VP Marketing",
-      company: "ScaleTech",
+      id: 4,
+      quote:
+        "Passionate, forward-looking, and achievement-driven—precisely what we desired. Their unique approach continually presents novel ideas. With a firm commitment to high standards.",
+      author: "Mei Chen",
+      role: "VP Analytics, Fintech Platform",
       avatar: "/images/opai-img-475-1.jpg",
-      content:
-        "The combination of predictive AI models and human creative touch gave us a real competitive edge. Highly recommend Nexsas to any high-growth brand.",
       rating: 5,
     },
     {
-      name: "Sofia Rossi",
-      role: "Marketing Director",
-      company: "FinFlow",
+      id: 5,
+      quote:
+        "Enthusiastic, progressive, and results-oriented—exactly what we aimed for. Their groundbreaking tactics consistently deliver innovative solutions. With a strong pledge to excellence.",
+      author: "Sofia Rossi",
+      role: "Head of Content, Media Group",
       avatar: "/images/ns-avatar-35.png",
-      content:
-        "Outstanding partnership. Their continuous testing methodology delivered immediate returns that only continued compounding over time.",
       rating: 5,
     },
   ],

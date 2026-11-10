@@ -1,197 +1,111 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { faqData } from '@/data/faqData';
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = React.useState(0);
-  const toggleFaq = (index) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+  const [openIndex, setOpenIndex] = useState(-1); // Matching screenshot 1 where all 8 items start collapsed with subtle down chevrons
+
+  const toggleFaq = (idx) => {
+    setOpenIndex(openIndex === idx ? -1 : idx);
   };
+
   return (
-    <div className="elementor-element elementor-element-6f33cc6 e-flex e-con-boxed nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-parent" data-e-type="container" data-element_type="container" data-id="6f33cc6">
-      <div className="e-con-inner">
-        <div className="elementor-element elementor-element-2845308 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="2845308">
-          <div className="elementor-element elementor-element-e096104 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-e-type="container" data-element_type="container" data-id="e096104">
-            <div className="gsap-animation elementor-element elementor-element-9c45f7b e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.1" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="9c45f7b" data-offset="60" data-rotation="0">
-              <div className="elementor-element elementor-element-24aae4c nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="24aae4c" data-widget_type="image.default">
-                <img alt="" className="attachment-full size-full wp-image-47415" decoding="async" height="32" loading="lazy" src="/images/Star-9-2.png" width="31" />
-                               </div>
-              <div className="elementor-element elementor-element-19755f5 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-e-type="widget" data-element_type="widget" data-id="19755f5" data-widget_type="nextsaas-heading.default">
-                <div className="elementor-widget-container">
-                  <div className="nextsaas_heading_wrap nextsaas-element">
-                    <p className="font-medium mb-4 nextsaas_heading">FAQ’s</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="gsap-animation elementor-element elementor-element-a8be779 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.2" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="a8be779" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <h2 className="font-medium mb-4 nextsaas_heading">Frequently asked questions</h2>
-                </div>
-              </div>
-            </div>
-            <div className="gsap-animation elementor-element elementor-element-28221fb nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas-heading" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="28221fb" data-offset="60" data-rotation="0" data-widget_type="nextsaas-heading.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_heading_wrap nextsaas-element">
-                  <p className="font-medium mb-4 nextsaas_heading">Frequently asked questions ordered by popularity. Remember that if the visitor has not committed to the call to action, they may still have questions (doubts) that can be answered.</p>
-                </div>
-              </div>
-            </div>
-            <div className="gsap-animation elementor-element elementor-element-74eba7f nextsaas-filter-effect-no elementor-widget elementor-widget-image" data-delay="0.4" data-direction="down" data-duration="0.6" data-e-type="widget" data-element_type="widget" data-gsap-animate="true" data-id="74eba7f" data-offset="60" data-rotation="0" data-widget_type="image.default">
-              <img alt="" className="attachment-full size-full wp-image-47416" decoding="async" height="984" loading="lazy" sizes="(max-width: 1174px) 100vw, 1174px" src="/images/faq-img-02.png" srcSet="/images/faq-img-02.png 1174w, /images/faq-img-02-300x251.png 300w, /images/faq-img-02-1024x858.png 1024w, /images/faq-img-02-768x644.png 768w, /images/faq-img-02-239x200.png 239w" width="1174" />
-                           </div>
+    <section
+      id="faq"
+      className="relative w-full bg-white text-[#0D0D12] py-20 sm:py-28 lg:py-[120px] px-5 sm:px-8 lg:px-12 overflow-hidden"
+    >
+      <div className="w-full max-w-[1240px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16">
+        {/* Left Column: Heading, Subtitle & Graphic */}
+        <div className="w-full lg:w-[46%] flex flex-col items-start select-none">
+          {/* Pill Badge */}
+          <div className="flex items-center gap-2 mb-4">
+            <img
+              src={faqData.starIcon}
+              alt=""
+              className="w-3.5 h-3.5 object-contain"
+            />
+            <span className="font-inter-tight text-[#0D0D1299] text-xs sm:text-[13px] font-normal tracking-wide">
+              {faqData.badge}
+            </span>
           </div>
-          <div className="gsap-animation elementor-element elementor-element-1b1f725 e-con-full e-flex nextsaas-filter-effect-no nextsaas-custom-background-no nextsaas-custom-border-glow-animation-no nextsaas-custom-glowing-card-no nextsaas-sticky-no e-con e-child" data-delay="0.3" data-direction="down" data-duration="0.6" data-e-type="container" data-element_type="container" data-gsap-animate="true" data-id="1b1f725" data-offset="60" data-rotation="0">
-            <div className="elementor-element elementor-element-df5c058 nextsaas-filter-effect-no elementor-widget elementor-widget-nextsaas_accordion" data-e-type="widget" data-element_type="widget" data-id="df5c058" data-widget_type="nextsaas_accordion.default">
-              <div className="elementor-widget-container">
-                <div className="nextsaas_accordion_wrapper" data-layout="layout-1">
-                  {/* faq items */}
-                  <div className="accordion w-full mx-auto flex flex-col">
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item active-accordion">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">What is the capital of France?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">How does photosynthesis work?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">What are the benefits of regular exercise?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">Who wrote 'Pride and Prejudice'?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">What is the importance of the water cycle?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">What are the main causes of climate change?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">What is the process of cellular respiration?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dark:bg-background-7 bg-white rounded-[20px] px-6 sm:px-8 accordion-item">
-                      <button className="accordion-action flex items-center cursor-pointer justify-between sm:pt-8 pt-5 sm:pb-8 pb-5 w-full">
-                        <span className="flex-1 text-left sm:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent">How do vaccines work to protect against diseases?</span>
-                        {/* Accordion Icon */}
-                        <span className="sm:ml-auto ml-2.5 block accordion-arrow text-secondary">
-                          <svg fill="none" height="16" stroke="currentColor" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.8" strokeWidth="1.5">
-                            </path>
-                          </svg>
-                        </span>
-                      </button>
-                      <div className="accordion-content">
-                        <div className="sm:pt-6 pt-5 sm:pb-8 pb-5">
-                          <p>When collaborating with a business agency, you can generally expect an extensive array of services designed to not only support your current operations but also to foster growth and innovation within your business. These services often include strategic planning, marketing solutions, financial consulting, and operational improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                                   </div>
-              </div>
+
+          <h2 className="font-instrument text-[38px] sm:text-[46px] lg:text-[54px] font-normal leading-[1.12] text-[#0D0D12] mb-4">
+            {faqData.heading}
+          </h2>
+
+          <p className="font-inter-tight text-[#0D0D1299] text-[15px] sm:text-[16px] leading-relaxed mb-8 max-w-[480px]">
+            {faqData.description}
+          </p>
+
+          {/* Left Illustration */}
+          {faqData.image && (
+            <div className="w-full max-w-[440px] rounded-2xl overflow-hidden shadow-sm">
+              <img
+                src={faqData.image}
+                alt="FAQ Illustration"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
             </div>
-          </div>
+          )}
+        </div>
+
+        {/* Right Column: 8 Border-Separated Accordion Items (matches screenshot exactly) */}
+        <div className="w-full lg:w-[50%] flex flex-col">
+          {faqData.faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+
+            return (
+              <div
+                key={idx}
+                className="w-full border-b border-[#E5E7EB] first:border-t-0"
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full flex items-center justify-between py-4 sm:py-5 text-left gap-4 cursor-pointer group"
+                >
+                  <span
+                    className={`font-inter-tight text-[17px] sm:text-[18px] font-medium leading-[24px] transition-colors ${
+                      isOpen ? 'text-[#0D0D12]' : 'text-[#0D0D12]/80 group-hover:text-[#0D0D12]'
+                    }`}
+                  >
+                    {faq.question}
+                  </span>
+                  <span
+                    className={`shrink-0 text-[#0D0D1280] transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 text-[#0D0D12]' : ''
+                    }`}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      width="15"
+                      height="15"
+                    >
+                      <path
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="pb-5 font-inter-tight text-[15px] sm:text-[16px] text-[#0D0D12]/70 leading-[24px]">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
